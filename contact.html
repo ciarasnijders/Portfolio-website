@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ciara's Portfolio</title>
+  <meta name="description" content="This website will contain all information relating to Ciara's portfolio.">
+  <link rel="icon" type="image/jpeg" href="img/favicon-32x32.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="page-header">
+                <!-- Add logo here -->
+        <img src="img/Ciara_Snijders_logo.png" alt="Personal logo of Ciara Snijders, a circular  text logo with my initials in the center and surrounded by text reading Ciara Snijders, Web Developer" class="page-header__item" width="60">
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+      <h1>Contact</h1>
+          <article>
+                Address: <br>
+                Olieslagerslaan, 58<br>
+                2012EZ Haarlem<br>
+                Netherlands<br>
+                <br>
+                <a href="tel:+31 639017995">Tel: +31 639017995</a>
+                <br>
+                <a href="skype:ciarasnijders">Skype: ciarasnijders</a>
+                <br>
+                <a href="mailto:ciarazsnijder@gmail.com"> Email: ciarazsnijders@gmail.com</a>
+            </article>
+            <br>
+            <div>
+                <a href="mailto:ciarazsnijder@gmail.com">Contact me</a>
+            </div>
+
+            <section>
+              <h3>Contact Form</h3>
+            <br>
+                  <form action="/login-form-action" method="post" id="contact-form">
+                      <label class="standard-label" for="contact-email">Email:</label>
+                      <br>
+                          <input type="email" id="contact-email" name="user_email" required>
+                      <br>
+                      <label class="standard-label" for="contact-telephone">Telephone: </label>
+                      <br>
+                      <input type="tel" id="contact-telephone">
+                      <br>
+                      <label class="standard-label" for="contact-message">Message:</label>
+                      <br>
+                      <textarea maxlength="240" id="contact-message" required></textarea>
+                      <br>
+                      <br>
+                      <button type="submit">Send message</button>
+                </form>
+            </section>
+    </main>
+
+
+    <footer class="page-footer">
+        <p>
+        Find me on
+        </p>
+        <div class="social-media">
+            <!-- Add Github logo image here -->
+            <a href="https://github.com/ciarasnijders"> <img src="img/img_svg/github_logo.svg" alt="Official Github logo"> </a>
+            <!-- Add LinkedIn logo image here -->
+            <a href="https://www.linkedin.com/in/ciara-snijders/"> <img src="img/img_svg/linkedin_logo.svg" alt="Official LinkedIn logo"> </a>
+        </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+
+</body>
+
+</html>
