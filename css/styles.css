@@ -8,13 +8,31 @@ light green (Laurel green): #BDC4AB
 bright olive green (Artichoke): #8C9970
  */
 
-:root {
-  --color-white: #EFECE6;
+ /*
+ --colour-dark-blue: #495464;
+ --colour-grey-blue: #bbbfca;
+ --color-white: #f4f4f2;
+ --colour-light-grey: #e8e8e8;
+ --colour-grey: #bbbbbe;
+   --color-white: #fcfcfa;
   --color-cream: #DFDACE;
   --color-olive-green: #6C7755;
   --color-dark-olive-green:#414833;
   --color-dark-green: #737967;
   --color-light-green: #BDC4AB;
+ */
+
+:root {
+  --color-cream: #DFDACE;
+  --color-olive-green: #6C7755;
+  --color-dark-olive-green:#414833;
+  --color-dark-green: #737967;
+  --color-light-green: #BDC4AB;
+  --colour-dark-blue: #495464;
+  --colour-grey-blue: #bbbfca;
+  --color-white: #fff;
+  --colour-light-grey: #e8e8e8;
+  --colour-grey: #bbbbbe;
   --color-black: #000;
   --color-sun-yellow: #edc655;
   --color-sun-orange: #fcffad;
@@ -37,13 +55,13 @@ body {
   /* Sets the font size to 16px */
   line-height: 1.6;
   /* Sets the line-height to 1.6 */
-  color: var(--color-dark-green);
+  color: var(--color-black);
   height: 100%;
   min-height: 100vh;
   padding: 15px; /* Adds a 10px inner spacing to all sides*/
   margin: 10px; /* Adds a 10px outer spacing to all sides*/
   border: 1px; /* Attributes describe: thickness, type, color*/
-  position:relative;
+  position: relative;
 }
 
 body::after {
@@ -56,14 +74,10 @@ h1, h2, h3 {
   font-weight: var(--heading-weight);
 }
 
-h1 {
-
+h1 , h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 50px;
-}
-
-h2 {
-  font-size: 24px;
+  color: var(--colour-dark-blue);
 }
 
 h3 {
@@ -72,15 +86,23 @@ h3 {
 
 .page-header {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 15vh;
   padding: 20px;
+  background: var(--colour-dark-blue);
+  z-index: 1;
 }
 
 
 a:before
 {
     position: absolute;
-    color: #FFF;
+    color:  var(--color-white);
     top: 0px;
     left: 0px;
     padding: 10px;
@@ -89,13 +111,11 @@ a:before
     transition: all 0.3s;
     transform: scale(0.8);
     opacity: 0;
-} 
-
-
+}
 
 
 .page-header__item {
-  flex: 0 1 200px;
+  flex: 0 1 70px;
 }
 .page-header__item:last-child {
   flex-grow: 1;
@@ -104,73 +124,91 @@ a:before
 
 .navigation-list__item--active {
   text-decoration: none;
-   font-weight: bold;
-    font-size: 22px;
+  /* font-weight: bold; */
+  font-size: 22px;
+  color:  var(--color-white);
 }
 
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.navigation-list a {
+  color:  var(--colour-light-grey);
+  text-decoration: none;
+}
+
+.navigation-list a:hover {
+  color:  var(--colour-light-grey);
+  text-decoration: underline;
 }
 
 a {
-  color: var(--color-olive-green);
+  color: var(--colour-dark-blue);
+  text-decoration: none;
 }
 
-a:visited {
-  color: var(--color-dark-olive-green);
-}
 a:hover, a:focus {
   text-decoration: none;
   cursor: pointer;
   opacity: 0.8;
 }
 
-a:active {
-  color: var(--color-olive-green);
+
+.navigation-list a:active {
+  color:  var(--colour-white);
 }
 
 
 .index-buttons{
-  padding: 25px; 
-  margin: 10px;
-  border: 1px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  margin-left: -8px;
 }
 
-button, 
+button,
 .button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: var(--color-light-green);
-  color: var(--color-black);
+  background-color: var(--colour-dark-blue);
+  color: var(--color-white);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   transition: 0.5s opacity;
+  margin-top: 10px;
 }
 
-button:hover, 
+.primary-button {
+  background-color: var(--colour-dark-blue);
+  border: none;
+  font-family: inherit;
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.primary-button a {
+  color: var(--color-white);
+}
+
+button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* No underlining when hovering over a link */
+  
   text-decoration: none;
   cursor: pointer;
   opacity: 0.8;
-  font-size:18px
-}
-
-.button__secondary {
-    border: none;
-    font-family: inherit;
-    background-color: var(--color-light-green);
-    color: var(--color-black);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  /* font-size:18px */
 }
 
 ul {
@@ -191,15 +229,21 @@ li, ul {
 
 .page-container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 10% auto;
+  position: relative;
+  z-index: 0;
 }
 
 .page-footer {
   text-align: center;
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   width: 100%;
   height: 50px;
+}
+
+.svg-main {
+  margin-bottom: 100px;
 }
 
 /* start grid fallback */
@@ -219,10 +263,20 @@ li, ul {
   }
 
   .project-list__item {
-  background-color: lightgray;
+    background-color: var(--colour-light-grey);
+    border: 1px solid var(--colour-dark-blue);
+    color: var(--colour-dark-blue);
     width: auto;
     min-height: auto;
     margin: 0;
+  }
+  .project-list__item a {
+    color: var(--colour-dark-blue);
+    text-decoration: none;
+  }
+  .project-list__item a:hover {
+    color: var(--colour-dark-blue);
+    text-decoration: underline;
   }
 }
 
@@ -244,13 +298,10 @@ li, ul {
 
 @keyframes door-color-change {
   0% {
-    fill: white;
-  }
-  50% {
-    fill: red;
+    fill: var( --color-white);
   }
   100% {
-    fill: blue;
+    fill:  var(--color-sun-red)
   }
 }
 .door {
@@ -279,9 +330,9 @@ li, ul {
   animation: 20s cloud-move infinite alternate linear;
 }
 
-.cloud-back {
+/* .cloud-back {
   animation: 20s cloud-move-reverse infinite alternate linear;
-}
+} */
 
 .amsterdam-svg {
   max-width: 100%;
@@ -295,18 +346,28 @@ li, ul {
   .project-list {
     grid-template-columns: 1fr;
   }
+  .page-container{
+    top: 15vh;
+  }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .project-list {
     grid-template-columns: 1fr 1fr;
+  }
+  .page-container{
+    top: 10vh;
   }
 }
 @media all and (max-width: 750px) {
   .project-list {
     grid-gap: 10px;
   }
- 
   h1 {
     font-size: 22px;
+  }
+}
+@media all and (min-width: 750px) and (max-width: 1500px){
+  .page-container{
+    top: 5vh;
   }
 }
