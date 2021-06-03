@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-12">
                         <label for="contact-telephone" class="form-label">Telephone</label>
-                        <input type="text" class="form-control" id="contact-telephone" placeholder="+31...." required>
+                        <input type="text" pattern="\d*" class="form-control" id="contact-telephone" placeholder="+31...." required>
                     </div>
                     <div class="col-12">
                         <label for="contact-message" class="form-label">Message</label>
@@ -80,7 +80,6 @@
             </section>
     </main>
 
-
     <footer class="page-footer">
         <p>
         Find me on
@@ -92,6 +91,7 @@
             <a href="https://www.linkedin.com/in/ciara-snijders/"> <img src="img/img_svg/linkedin_logo.svg" alt="Official LinkedIn logo"> </a>
         </div>
     </footer>
+
 
     <script src="js/tota11y.min.js"></script>
 
